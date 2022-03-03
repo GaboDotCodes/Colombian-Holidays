@@ -1,0 +1,67 @@
+[
+    {
+        "day": "01",
+        "month": "01",
+        "nextMonday": false
+    },
+    {
+        "day": "06",
+        "month": "01",
+        "nextMonday": true
+    },
+    {
+        "day": "19",
+        "month": "03",
+        "nextMonday": true
+    },
+    {
+        "day": "01",
+        "month": "05",
+        "nextMonday": false
+    },
+    {
+        "day": "29",
+        "month": "06",
+        "nextMonday": true
+    },
+    {
+        "day": "20",
+        "month": "07",
+        "nextMonday": false
+    },
+    {
+        "day": "07",
+        "month": "08",
+        "nextMonday": false
+    },
+    {
+        "day": "15",
+        "month": "08",
+        "nextMonday": true 
+    },
+    {
+        "day": "12",
+        "month": "10",
+        "nextMonday": true 
+    },
+    {
+        "day": "01",
+        "month": "11",
+        "nextMonday": true
+    },
+    {
+        "day": "11",
+        "month": "11",
+        "nextMonday": true
+    },
+    {
+        "day": "08",
+        "month": "12",
+        "nextMonday": false
+    },
+    {
+        "day": "25",
+        "month": "12",
+        "nextMonday": false
+    }
+]
