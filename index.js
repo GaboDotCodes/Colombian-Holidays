@@ -40,7 +40,7 @@ const nextMonday = (date) => {
     if (date.getDay() === 0) {
         date.setDate(date.getDate() + 1);
     } else {
-        const daysToAdd = 8 - date.getDate();
+        const daysToAdd = 8 - date.getDay();
         date.setDate(date.getDate() + daysToAdd);
     }
     return date;
@@ -59,14 +59,14 @@ const holidaysByYear = (y) => {
     const normalHolidays = holidays.map(holidayDate => {
         const { day, month, name } = holidayDate;
         if (holidayDate.nextMonday === false) return { day, month, name };
-        const holiday = nextMonday(new Date(year, month, day));
+        const holiday = nextMonday(new Date(year, month - 1, day));
         return { day: holiday.getDate(), month: holiday.getMonth() + 1, name }
     });
 
     const easterDate = anonymousAlgorithm(year);
     const easterHolidays = easterRelatedHolidays.map(holidayDate => {
         const { daysRelativeToEaster, name } = holidayDate;
-        let holiday = easterDate;
+        let holiday = new Date(easterDate.getTime());
         holiday.setDate(easterDate.getDate() + daysRelativeToEaster);
         if (holidayDate.nextMonday) holiday = nextMonday(holiday);
         return { day: holiday.getDate(), month: holiday.getMonth() + 1, name }
@@ -102,3 +102,5 @@ const isColombianHoliday = (date) => {
 
 
 }
+
+console.log(holidaysByYear("2022"));
