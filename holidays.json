@@ -3,78 +3,78 @@
         "day": 1,
         "month": 1,
         "nextMonday": false,
-        "name": ""
+        "name": "Año Nuevo"
     },
     {
         "day": 6,
         "month": 1,
         "nextMonday": true,
-        "name": ""
+        "name": "Día de los Reyes Magos"
     },
     {
         "day": 19,
         "month": 3,
         "nextMonday": true,
-        "name": ""
+        "name": "Día de San José"
     },
     {
         "day": 1,
         "month": 5,
         "nextMonday": false,
-        "name": ""
+        "name": "Día del Trabajo"
     },
     {
         "day": 29,
         "month": 6,
         "nextMonday": true,
-        "name": ""
+        "name": "San Pedro y San Pablo"
     },
     {
         "day": 20,
         "month": 7,
         "nextMonday": false,
-        "name": ""
+        "name": "Día de la Independencia"
     },
     {
         "day": 7,
         "month": 8,
         "nextMonday": false,
-        "name": ""
+        "name": "Batalla de Boyacá"
     },
     {
         "day": 15,
         "month": 8,
         "nextMonday": true,
-        "name": ""
+        "name": "Día de la Asunción"
     },
     {
         "day": 12,
         "month": 10,
         "nextMonday": true,
-        "name": ""
+        "name": "Celebración del Día de la Raza"
     },
     {
         "day": 1,
         "month": 11,
         "nextMonday": true,
-        "name": ""
+        "name": "Día de todos los Santos"
     },
     {
         "day": 11,
         "month": 11,
         "nextMonday": true,
-        "name": ""
+        "name": "Independencia de Cartagena"
     },
     {
         "day": 8,
         "month": 12,
         "nextMonday": false,
-        "name": ""
+        "name": "Inmaculada Concepción"
     },
     {
         "day": 25,
         "month": 12,
         "nextMonday": false,
-        "name": ""
+        "name": "Navidad"
     }
 ]
