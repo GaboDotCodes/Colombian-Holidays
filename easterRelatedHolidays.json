@@ -1,27 +1,27 @@
 [
     {
         "daysRelativeToEaster": -3,
-        "name": "Jueves Santo",
-        "nextMonday": false
+        "nextMonday": false,
+        "name": "Jueves Santo"
     },
     {
         "daysRelativeToEaster": -2,
-        "name": "Viernes Santo",
-        "nextMonday": false
+        "nextMonday": false,
+        "name": "Viernes Santo"
     },
     {
         "daysRelativeToEaster": 39,
-        "name": "Ascensión del Señor",
-        "nextMonday": true
+        "nextMonday": true,
+        "name": "Ascensión del Señor"
     },
     {
         "daysRelativeToEaster": 60,
-        "name": "Corphus Christi",
-        "nextMonday": true
+        "nextMonday": true,
+        "name": "Corphus Christi"
     },
     {
         "daysRelativeToEaster": 68,
-        "name": "Sagrado Corazón de Jesús",
-        "nextMonday": true
+        "nextMonday": true,
+        "name": "Sagrado Corazón de Jesús"
     }
 ]
