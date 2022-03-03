@@ -89,18 +89,18 @@ const holidaysByYear = (y) => {
  * @param {String} date DDMMYYYY For example: 24032020
  */
 const isColombianHoliday = (date) => {
-    let isHoliday = false;
-
     if (date.length < 8 || isNaN(date)) throw "Wrong format, send that like DDMMYYYY For example: 24032020";
 
-    const day = date.slice(0, 2);
-    const month = date.slice(2, 4);
-    const year = date.slice(4);
+    const day = parseInt(date.slice(0, 2));
+    const month = parseInt(date.slice(2, 4));
+    const year = parseInt(date.slice(4));
 
-    if (day === "00" || month === "00" || year === "0000") throw "Days, months and years start counting by 1, not by 0";
-    if (day > "31" || month > "12") throw "One month has max. 31 days and a year 12 months";
+    const dateObj = new Date(year, month - 1, day);
+    const checkDate = (day === dateObj.getDate() && month === dateObj.getMonth() + 1 && year === dateObj.getFullYear())
+    if (!checkDate) throw "Invalid date, that date does not exist"
 
-
+    return (holidaysByYear(year).filter(holiday => holiday.day === day && holiday.month === month).length === 1);
 }
 
 console.log(holidaysByYear("2022"));
+console.log(isColombianHoliday("20062022"));
