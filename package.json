@@ -1,0 +1,12 @@
+{
+  "name": "holidays-colombia",
+  "version": "1.0.0",
+  "description": "It allows you know if any day in Colombia is a holiday or not",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "GaboDotCodes",
+  "license": "ISC"
+}
