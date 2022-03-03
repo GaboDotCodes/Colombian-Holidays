@@ -85,22 +85,40 @@ const holidaysByYear = (y) => {
 }
 
 /**
- * It allows you know if any day in Colombia is a holiday or not
- * @param {String} date DDMMYYYY For example: 24032020
+ * Calculate all holidays in a month
+ * @param {String} monthYear MMYYYY For example: 072022
+ * @returns {Array} Holidays in a month
  */
-const isColombianHoliday = (date) => {
-    if (date.length < 8 || isNaN(date)) throw "Wrong format, send that like DDMMYYYY For example: 24032020";
+ const holidaysByMonth = (monthYear) => {
+    if (monthYear.length < 6 || isNaN(monthYear)) throw "Wrong format, send that like MMYYYY For example: 072022";
 
-    const day = parseInt(date.slice(0, 2));
-    const month = parseInt(date.slice(2, 4));
-    const year = parseInt(date.slice(4));
+    const month = parseInt(monthYear.slice(0, 2));
+    const year = parseInt(monthYear.slice(2));
 
-    const dateObj = new Date(year, month - 1, day);
-    const checkDate = (day === dateObj.getDate() && month === dateObj.getMonth() + 1 && year === dateObj.getFullYear())
-    if (!checkDate) throw "Invalid date, that date does not exist"
+    if (month < 01 || month > 12 || year === 0000) throw "Invalid month or year" 
 
-    return (holidaysByYear(year).filter(holiday => holiday.day === day && holiday.month === month).length === 1);
+    return holidaysByYear(year).filter(holiday => holiday.month === month);
 }
 
-console.log(holidaysByYear("2022"));
-console.log(isColombianHoliday("20062022"));
+/**
+ * It allows you know if any day in Colombia is a holiday or not
+ * @param {String} date DDMMYYYY For example: 24032020
+ * @returns {Boolean} true if date is a holiday, false in other way
+ */
+const isColombianHoliday = (date) => {
+    try {
+        if (date.length < 8 || isNaN(date)) throw "Wrong format, send that like DDMMYYYY For example: 24032020";
+    
+        const day = parseInt(date.slice(0, 2));
+        const month = parseInt(date.slice(2, 4));
+        const year = parseInt(date.slice(4));
+    
+        const dateObj = new Date(year, month - 1, day);
+        const checkDate = (day === dateObj.getDate() && month === dateObj.getMonth() + 1 && year === dateObj.getFullYear())
+        if (!checkDate) throw "Invalid date, that date does not exist"
+    
+        return (holidaysByYear(year).filter(holiday => holiday.day === day && holiday.month === month).length === 1);    
+    } catch (error) {
+        throw error
+    }
+}
