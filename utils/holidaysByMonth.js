@@ -13,7 +13,7 @@ const holidaysByYear = require('./holidaysByYear');
 
     if (month < 01 || month > 12 || year === 0000) throw "Invalid month or year"
 
-    return holidaysByYear(year).filter(holiday => holiday.month === month);
+    return { holidays: holidaysByYear(year).holidays.filter(holiday => holiday.month === month) };
 }
 
 module.exports = holidaysByMonth;

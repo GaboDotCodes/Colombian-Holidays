@@ -38,7 +38,7 @@ const holidaysByYear = (y) => {
             if (first.day > second.day) return 1
         }
     });
-    return allHolidays;
+    return { holidays: allHolidays };
 }
 
 module.exports = holidaysByYear;

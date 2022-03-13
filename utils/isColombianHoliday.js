@@ -16,7 +16,7 @@ const holidaysByYear = require('./holidaysByYear');
     const checkDate = (day === dateObj.getDate() && month === dateObj.getMonth() + 1 && year === dateObj.getFullYear())
     if (!checkDate) throw "Invalid date, that date does not exist"
 
-    return (holidaysByYear(year).filter(holiday => holiday.day === day && holiday.month === month).length === 1);
+    return { isholiday: (holidaysByYear(year).holidays.filter(holiday => holiday.day === day && holiday.month === month).length === 1) };
 }
 
 module.exports = isColombianHoliday;
