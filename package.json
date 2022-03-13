@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js",
-    "test": "echo \"Building tests\""
+    "test": "ok"
   },
   "author": "GaboDotCodes",
   "license": "ISC",
