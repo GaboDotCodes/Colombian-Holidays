@@ -4,11 +4,26 @@
   "description": "It allows you know if any day in Colombia is a holiday or not",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon index.js",
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "GaboDotCodes",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GaboDotCodes/colombian-holidays.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GaboDotCodes/colombian-holidays/issues"
+  },
+  "homepage": "https://github.com/GaboDotCodes/colombian-holidays#readme",
   "dependencies": {
+    "express": "^4.17.3",
+    "express-rate-limit": "^6.3.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
