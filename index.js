@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
+const cors = require('cors');
 
 const holidaysByYear = require('./utils/holidaysByYear');
 const holidaysByMonth = require('./utils/holidaysByMonth');
@@ -8,8 +9,11 @@ const isColombianHoliday = require('./utils/isColombianHoliday');
 
 const { PORT } = process.env;
 
+
 const app = express();
 const port = PORT || 3000;
+
+const whiteList = { origin: ['http://localhost:5500', 'https://gabodotcodes.github.io']};
 
 const limiter = rateLimit({
 	windowMs: 1000,
@@ -18,6 +22,7 @@ const limiter = rateLimit({
 	legacyHeaders: false,
 })
 
+app.use(cors(whiteList));
 app.use(limiter);
 app.use(morgan('tiny'));
 
