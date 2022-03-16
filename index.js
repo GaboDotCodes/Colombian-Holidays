@@ -22,7 +22,7 @@ const limiter = rateLimit({
 	legacyHeaders: false,
 })
 
-app.use(cors(whiteList));
+app.use(cors());
 app.use(limiter);
 app.use(morgan('tiny'));
 
