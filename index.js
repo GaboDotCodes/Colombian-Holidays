@@ -13,7 +13,7 @@ const { PORT } = process.env;
 const app = express();
 const port = PORT || 3000;
 
-const whiteList = { origin: ['http://localhost:5500', 'https://gabodotcodes.github.io']};
+const whiteList = { origin: ['http://localhost', 'https://gabodotcodes.github.io']};
 
 const limiter = rateLimit({
 	windowMs: 1000,
